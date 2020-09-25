@@ -1,0 +1,121 @@
+
+nav {
+  height: 80px;
+  z-index: 999;
+  background-color: var(--color-dark);
+  position: sticky;
+  top: 0;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 80px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-green);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.fa-spa {
+  margin-right: 0.5rem
+}
+
+.menu-icon {
+  display: none;   
+}
+
+.navbar__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 500px;
+}
+
+.navbar__link {
+  line-height: 80px;
+  text-decoration: none;
+  height: 80px;
+  padding: 0 10px;
+}
+
+.navbar__link:hover {
+  border-bottom: 5px solid var(--color-green);
+}
+
+.navbar__link a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+.navbar-btn {
+  background: none;
+  border: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 18px 40px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--color-white);
+}
+
+@media screen and (max-width: 960px) {
+
+  .navbar__links {
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 90vh;
+    background-color: var(--color-dark);
+    padding: 0 100px 100px 100px
+  }
+
+  .navbar__links.active {
+    top: 100%
+  }
+
+  .navbar__link {
+    font-size: 1.4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+  }
+
+  .navbar__link:hover {
+    border-left: 5px solid var(--color-green);
+    border-right: 5px solid var(--color-green);
+    border-bottom: none
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: var(--color-white);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar__container {
+    padding: 0 10px
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem
+  }
+}

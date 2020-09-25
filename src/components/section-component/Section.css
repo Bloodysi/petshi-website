@@ -1,0 +1,143 @@
+
+.section {
+  height: 100vh;
+  padding: 0px 50px;
+  color: var(--color-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section__container.reverse {
+  flex-direction: row-reverse;  
+}
+
+.section__container-content {
+  width: 800px;
+}
+.section__container-content.reverse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section__container-content h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem
+}
+
+.section__container-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem
+}
+
+.section__container-content p {
+  font-size: 1.12rem;
+}
+
+.section__container-content p.reverse {
+  text-align: center;
+}
+
+.section__container-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__container-image img {
+  width: 80%;
+}
+
+.section-btn {
+  margin-top: 2rem;
+}
+
+.section.darkBg {
+  background-color: var(--color-dark);
+  color: #EEE5E9;
+}
+
+.white {
+  color: #fff
+}
+
+@media screen and (max-width: 960px) {
+
+  .section__container-content {
+    width: initial;
+  }
+
+  .section__container-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem
+  }
+  
+  .section__container-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem
+  }
+  
+  .section__container-content p {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .section__container {
+    flex-direction: column;
+  }
+
+  .section__container.reverse {
+    flex-direction: column-reverse;
+  }
+
+  .section__container-content {
+    width: initial;
+    margin-bottom: 4rem;
+  }
+
+  .section__container-content.reverse {
+    margin-bottom: 0;
+    margin-top: 3rem;
+    align-items: flex-end;
+  }
+
+  .section__container-content p.reverse {
+    text-align: end;
+  }
+
+  .section__container-image img {
+    width: 60%;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .section__container-content h1 {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem
+  }
+  
+  .section__container-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 2rem
+  }
+  
+  .section__container-content p {
+    font-size: 1rem;
+  }
+
+  .section__container-image img {
+    width: 100%;
+  }
+
+}

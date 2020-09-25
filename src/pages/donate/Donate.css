@@ -1,0 +1,76 @@
+.donate__container {
+  height: 100%;
+  padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.donate__container h1 {
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: var(--color-dark);
+  text-transform: uppercase;
+}
+
+.donate__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.donate__card {
+  height: 450px;
+  width: 300px;
+  margin: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.donate__card:hover {
+  transform: scale(1.05);
+}
+
+.donate__card:nth-child(1) {
+  background-image: url(
+    https://static.everypixel.com/ep-pixabay/1134/4254/5987/51199/11344254598751199845-homeless.jpg
+  );
+  background-size: cover;
+}
+
+.donate__card:nth-child(2) {
+  background-image: url(
+    https://media.istockphoto.com/photos/trash-on-the-beach-picture-id951448270?k=6&m=951448270&s=612x612&w=0&h=jDYiOQAqIU6KzjhZICxQC3tCxqqk60gZMC3KswsIEXs=
+  );
+  background-size: cover;
+}
+
+.donate__card:nth-child(3) {
+  background-image: url(
+    https://media.istockphoto.com/photos/lazy-dog-vertical-picture-id91095697?k=6&m=91095697&s=170667a&w=0&h=Z6Ey6ZyAJz7QVdePm8zRe3Kpfp8NNf505u3XrK2QK-4=
+  );
+  background-size: cover;
+}
+
+@media screen and (max-width: 570px) {
+  .donate__container h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .donate__container {
+    padding: 100px 0;
+  }
+  .donate__container h1 {
+    font-size: 1.3rem;
+  }
+
+  .donate__card {
+    margin: 20px 0;
+  }
+}
