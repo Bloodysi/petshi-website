@@ -62,3 +62,9 @@
 .lg {
   padding: 18px 100px
 }
+
+@media screen and (max-width: 480px) {
+  .lg {
+    font-size: 1rem;
+  }
+}

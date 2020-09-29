@@ -8,6 +8,8 @@ const Navbar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(false)
 
+  const closeMenu = () => setClick(false)
+
   const showButton = () => {
     window.innerWidth <= 960 ? setButton(true) : setButton(false)
   }
@@ -17,24 +19,24 @@ const Navbar = () => {
   return (
     <nav>
       <div className='navbar__container'>
-        <Link to='/' className='logo'>
-          <i class="fas fa-spa"></i>
+        <Link to='/' className='logo' onClick={()=> setClick(false)}>
+          <i className="fas fa-spa"></i>
           PETSHI
         </Link>
         <div className='menu-icon' onClick={()=> setClick(!click)}>
-          {click ? <i class="fas fa-times-circle"></i> : <i class="fas fa-bars"></i>}
+          {click ? <i className="fas fa-times-circle"></i> : <i className="fas fa-bars"></i>}
         </div>
         <ul className={click ? 'navbar__links active' : 'navbar__links'}>
           <li className='navbar__link'>
-            <Link to='/'>Home</Link>
+            <Link to='/' onClick={()=> setClick(false)}>Home</Link>
           </li>
           <li className='navbar__link'>
-            <Link to='/know-us'>Know Us</Link>
+            <Link to='/know-us' onClick={()=> setClick(false)}>Know Us</Link>
           </li>
           <li className='navbar__link'>
-            <Link to='/donate'>Donate</Link>
+            <Link to='/donate' onClick={()=> setClick(false)}>Donate</Link>
           </li>
-          <Button color='white' size={!button ? 'sm' : 'lg'} link='/join-us'>Join Us</Button>
+          <Button color='white' size={!button ? 'sm' : 'lg'} link='/join-us' onClick={closeMenu}>Join Us</Button>
         </ul>   
       </div>
     </nav>
